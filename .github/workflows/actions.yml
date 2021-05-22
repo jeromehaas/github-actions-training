@@ -1,9 +1,8 @@
 name: actions
 
 on: 
-  schedule:
-    - cron: "*/5 * * * *"
-    - cron: "*/15 * * * *"
+  repository_dispatch:
+    types: [build]
   pull_request: 
     types: [closed, assigned, opened, reopened]
 jobs: 
