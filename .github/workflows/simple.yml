@@ -18,9 +18,9 @@ jobs:
           import platform
           print (platform.processor())
         shell: python
-
   run-windows-command: 
     runs-on: windows-latest
+    needs: [run-shell-command]
     steps: 
       - name: get directory
         run: Get-Location
