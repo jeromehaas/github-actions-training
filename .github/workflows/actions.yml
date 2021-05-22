@@ -1,6 +1,8 @@
 name: actions
 
 on: 
+  repository_dispatch:
+    types: [build]
   pull_request: 
     types: [closed, assigned, opened, reopened]
 jobs: 
